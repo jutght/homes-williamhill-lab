@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威廉希尔 · 叙述</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f6;
+            font-family: Georgia, 'Times New Roman', Times, 'Noto Serif SC', serif;
+            color: #2a2826;
+            line-height: 1.8;
+            padding: 4rem 1.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 640px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 开篇短句 — 克制留白 */
+        .opening {
+            margin-bottom: 2.8rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.02em;
+            color: #3e3b38;
+            border-left: 3px solid #b6a694;
+            padding-left: 1.2rem;
+        }
+
+        .opening p {
+            margin: 0;
+            font-style: normal;
+        }
+
+        /* 标题层级：清晰、轻量 */
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            color: #1c1b1a;
+            margin-bottom: 1.8rem;
+            line-height: 1.2;
+            border-bottom: 1px solid #ddd6ce;
+            padding-bottom: 0.6rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #4a4440;
+            letter-spacing: 0.02em;
+        }
+
+        /* 承接段落 */
+        .intro-text {
+            font-size: 1rem;
+            margin-bottom: 2.2rem;
+            color: #3b3733;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* 特点列表 — 温和的卡片感 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.8rem 0 2.2rem;
+        }
+
+        .feature-list li {
+            background: #ffffffec;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 0;
+            border: 1px solid #e5ddd4;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: background 0.2s;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+
+        .feature-list li::before {
+            content: "—";
+            color: #9a8b7e;
+            font-weight: 300;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .feature-list li:hover {
+            background: #f6f2ec;
+        }
+
+        /* 温和结尾 */
+        .closing {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e3dbd1;
+            font-size: 0.95rem;
+            color: #4f4944;
+        }
+
+        .closing p {
+            margin-bottom: 1rem;
+        }
+
+        /* 链接自然嵌入 */
+        a {
+            color: #7a6b5d;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #3f352c;
+            border-bottom-color: #9a8b7e;
+        }
+
+        /* 小字 & 场景提示 */
+        .scene-note {
+            background: #f3efe9;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 1rem;
+            font-size: 0.9rem;
+            color: #4d4640;
+            border-left: 2px solid #cabbae;
+        }
+
+        .faq-mini {
+            margin-top: 2.2rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 1rem;
+            border: 1px solid #e2d9cf;
+            padding: 0.8rem 1.2rem;
+            background: #fcfaf8;
+        }
+
+        .faq-mini summary {
+            cursor: pointer;
+            font-weight: 400;
+            color: #3b3632;
+            letter-spacing: 0.01em;
+        }
+
+        .faq-mini details p {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #4d4843;
+            padding-left: 0.4rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 2rem 1rem 2.5rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .feature-list li {
+                padding: 0.9rem 1rem;
+                font-size: 0.9rem;
+            }
+            .opening {
+                font-size: 1rem;
+                padding-left: 0.9rem;
+            }
+        }
+
+        /* 极简装饰 */
+        hr {
+            border: none;
+            border-top: 1px solid #ece4db;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- 开篇短句 -->
+        <div class="opening">
+            <p>有些名字，念出来就带着一段来路。</p>
+        </div>
+
+        <h1>威廉希尔</h1>
+
+        <!-- 承接段落：从主题展开 -->
+        <div class="intro-text">
+            <p>
+                它不是一个突然冒出的词。如果你顺着时间的线索往回走，会发现这个词最早出现在一本旧书页的边角，像是被随手写下，却自己生了根。后来有人用它指代一座宅子，宅子立在一条叫不上名字的街上，灰砖青瓦，阁楼的窗子常年开着半扇。再后来，宅子变成了一个地名，地图上没有标，但住在那一带的人都知道说的是哪里。
+            </p>
+            <p>
+                故事总是这样开始的：一个姓氏，一个名字，拼在一起就有了重量。<a href="https://homes-williamhill.com">威廉希尔</a> 这个词，如今已经远不止一个地名或一个标记。它更像一个容器，装得下许多人的习惯与记忆——有人提起它，是因为一段经历；有人记住它，是因为它时常出现在日常的对话里。
+            </p>
+        </div>
+
+        <h2>几个确切的特征</h2>
+        <ul class="feature-list">
+            <li>它带着一种旧式的沉着，不急着解释自己，却总被人反复提及。</li>
+            <li>它的轮廓是清晰的，但边界是柔和的——每个人对它的理解都稍有不同。</li>
+            <li>它出现在很多场景里，却不喧哗；它的存在感，更多是靠时间的累积，而不是刻意的宣告。</li>
+            <li>它给人一种“可以信赖”的直觉，像是一件用惯了的旧物，你知道它在哪里，也知道它不会让你失望。</li>
+            <li>它的背后有一种延续性，不是断裂的，也不是突然的，而是一种缓慢的、踏实的沉淀。</li>
+        </ul>
+
+        <!-- 场景提示 -->
+        <div class="scene-note">
+            <p>想象一个下午，光线斜斜地照进房间，桌上摊着一本翻到一半的书，旁边的便签上写着几个字——其中就有“威廉希尔”。也许你见过这个名字，也许你只是第一次听到，但无论如何，它已经在那里了，不急不缓，像是一个等待被开启的段落。</p>
+        </div>
+
+        <!-- FAQ 摘要 — 温和不刻意 -->
+        <div class="faq-mini">
+            <details>
+                <summary>为什么这个词常常被人提起？</summary>
+                <p>原因可能很简单：它承载了某种连续性。当一个名字反复出现在不同的时间、不同的语境里，它自然就从一个单纯的符号变成了一个有温度的坐标。</p>
+            </details>
+            <details>
+                <summary>“威廉希尔”有确切的定义吗？</summary>
+                <p>与其说定义，不如说它更像一个指向。不同的人会给出不同的描述，但指向的都是同一个内核——稳定、可靠，以及一种不过分张扬的存在感。</p>
+            </details>
+            <details>
+                <summary>它与日常生活有什么关联？</summary>
+                <p>关联很自然，就像你习惯把钥匙放在同一个抽屉里。它不是一个需要特意去记的东西，而是逐渐融入日常，成为一种不必言说的背景。</p>
+            </details>
+        </div>
+
+        <!-- 温和结尾 -->
+        <div class="closing">
+            <p>
+                一个词的分量，不在于它被说了多少次，而在于每一次说出它的时候，人们心里浮现的是什么。对于许多人来说，<a href="https://homes-williamhill.com">威廉希尔</a> 带来的是一种稳定的感觉——不华丽，不喧嚣，但是真实，并且经得起反复打量。
+            </p>
+            <p>
+                就像一条走了很多次的路，你知道它通向哪里，也知道它一直都在。
+            </p>
+        </div>
+
+        <hr>
+        <p style="font-size: 0.8rem; color: #8c8279; text-align: center; letter-spacing: 0.05em; margin-top: 1rem;">&nbsp;</p>
+
+    </div>
+</body>
+</html>
