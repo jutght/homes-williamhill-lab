@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>专题·MK体育</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fce4b3 0%, #f7d8a6 35%, #fbcb8c 65%, #f9b96d 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 2rem 1.2rem;
+      line-height: 1.6;
+    }
+
+    .magazine-wrapper {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    /* 首页横幅 — 杂志式通栏 */
+    .hero {
+      background: rgba(255, 247, 230, 0.65);
+      backdrop-filter: blur(3px);
+      border-radius: 48px 48px 32px 32px;
+      padding: 2.5rem 2rem 2rem 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 20px 40px -16px rgba(160, 90, 30, 0.3);
+      border: 1px solid rgba(255, 220, 160, 0.4);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #4d2f1a;
+      margin-bottom: 0.5rem;
+      line-height: 1.15;
+    }
+
+    .hero h1 span {
+      background: #b8773e;
+      color: #fcf3e0;
+      display: inline-block;
+      padding: 0 0.6rem 0.1rem 0.6rem;
+      border-radius: 40px;
+      font-weight: 450;
+      font-size: 2.4rem;
+      margin-right: 0.2rem;
+    }
+
+    .hero .subhead {
+      font-size: 1.1rem;
+      color: #6d4a28;
+      border-left: 3px solid #c48747;
+      padding-left: 1rem;
+      margin-top: 0.6rem;
+      opacity: 0.85;
+    }
+
+    /* 白色卡片 — 杂志内容段 */
+    .card {
+      background: rgba(255, 250, 240, 0.88);
+      backdrop-filter: blur(3px);
+      border-radius: 32px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 6px 18px rgba(110, 60, 20, 0.08);
+      border: 1px solid #f5e3ce;
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 28px -6px rgba(140, 75, 25, 0.18);
+    }
+
+    .card h2 {
+      font-size: 1.7rem;
+      font-weight: 450;
+      color: #4a2e16;
+      border-bottom: 2px dashed #dbaa73;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.3px;
+    }
+
+    .card p {
+      color: #3a281a;
+      margin-bottom: 0.9rem;
+      font-size: 1rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-link {
+      background: #c48747;
+      color: #fef7eb;
+      padding: 0.1rem 0.4rem;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 430;
+      transition: all 0.15s;
+      white-space: nowrap;
+      border-bottom: 1px solid #a56d34;
+    }
+
+    .highlight-link:hover {
+      background: #b07338;
+      color: #fff8ed;
+      transform: scale(1.02);
+      box-shadow: 0 2px 8px rgba(160, 80, 20, 0.25);
+    }
+
+    /* FAQ摘要 / 引用卡片 */
+    .faq-note {
+      background: #f4e5d2;
+      border-radius: 28px;
+      padding: 1.6rem 2rem;
+      margin-top: 1.5rem;
+      border-left: 6px solid #b8773e;
+      color: #442d18;
+      font-size: 0.98rem;
+    }
+
+    .faq-note strong {
+      color: #7a4e24;
+    }
+
+    /* 页尾访问提示 */
+    .footer-visit {
+      margin-top: 2.2rem;
+      text-align: center;
+      padding: 1.2rem 1rem 1.8rem 1rem;
+      background: rgba(235, 215, 185, 0.3);
+      backdrop-filter: blur(4px);
+      border-radius: 60px 60px 30px 30px;
+      border: 1px solid #e3cbb0;
+    }
+
+    .footer-visit p {
+      color: #50361e;
+      font-size: 1.05rem;
+    }
+
+    .footer-visit .rounded-link {
+      background: #c48747;
+      color: #fcf2e0;
+      padding: 0.4rem 1.2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 450;
+      display: inline-block;
+      margin: 0 0.2rem;
+      border: 1px solid #b2763e;
+      transition: 0.15s;
+    }
+
+    .footer-visit .rounded-link:hover {
+      background: #b07338;
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(140, 70, 18, 0.3);
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .hero {
+        padding: 1.8rem 1.2rem;
+        border-radius: 36px 36px 24px 24px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero h1 span {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+        border-radius: 24px;
+      }
+      .card h2 {
+        font-size: 1.4rem;
+      }
+      .faq-note {
+        padding: 1.2rem 1rem;
+      }
+      .footer-visit p {
+        font-size: 0.97rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero h1 span {
+        font-size: 1.5rem;
+        padding: 0 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="magazine-wrapper">
+
+    <!-- 首页横幅 hero -->
+    <div class="hero">
+      <h1><span>MK</span>体育</h1>
+      <div class="subhead">运动视野 · 文化脉络 · 真实体验</div>
+    </div>
+
+    <!-- 背景说明：第一段自然介绍 杂志化切入 -->
+    <div class="card">
+      <h2>从赛场到生活</h2>
+      <p>现代体育早已超越简单的竞技，它成为社交、旅行、地域文化的一面镜子。MK体育关注的不只是比分与奖牌，更希望呈现运动背后的人与故事、场地与自然的关系。不同运动项目在各地生长出的独特面貌，往往比赛事本身更耐人寻味。</p>
+      <p>从户外耐力到社区球场，从冰雪运动到城市路跑——体育的边界在不断拓宽。而<a href="https://mainofficial-mksports.com" class="highlight-link">MK体育</a>正是这样一个沉淀观察、分享视角的平台，它试图将散落的片段编织成更有纵度的图景。</p>
+    </div>
+
+    <!-- 第二段：特点 / 视角 -->
+    <div class="card">
+      <h2>不止于资讯</h2>
+      <p>在信息泛滥的时代，过滤噪音比追逐热点更重要。MK体育更倾向于用专题、侧记、现场笔记等形式，还原运动场景中的细节和氛围。无论是顶级联赛的台前幕后，还是民间赛事的朴素热情，都值得被认真记录。</p>
+      <p>同时，MK体育也关注运动装备、场地设计、训练理念的演变。这些看似技术性的环节，恰恰塑造了每一代运动员的风格与边界。了解背景，才能更深入地看懂比赛、理解突破。</p>
+    </div>
+
+    <!-- 第三段：场景 / 内容方向 -->
+    <div class="card">
+      <h2>在地与远方的交汇</h2>
+      <p>不同气候与文化孕育出风格迥异的运动生态。MK体育在选题上常常跨越地域与项目，从北欧的越野滑雪小镇到东南亚的拳击营地，从高原训练基地到城市立体球场。这种对比让体育不再是孤立的数字，而成为生活方式的一部分。</p>
+      <p>无论是资深爱好者还是偶尔瞥见比赛的路人，都能在这些片段中找到共鸣或启发。运动是流动的，而内容是它的容器。</p>
+    </div>
+
+    <!-- FAQ 摘要 + 附加说明 (避免模板感) -->
+    <div class="faq-note">
+      <strong>✧ 常见疑惑速览</strong><br>
+      · MK体育主要聚焦哪些运动？—— 方向较广，涵盖团队球类、户外耐力、格斗、冰雪等，不设严格边界。<br>
+      · 内容更新的节奏是怎样的？—— 以专题和深度笔记为主，不定期发布，避免碎片化跟风。<br>
+      · 是否提供赛事数据或直播？—— 当前以文字及影像记录为主，侧重叙述与背景，而非实时数据流。<br>
+      · 如何进一步了解？—— 直接访问 <a href="https://mainofficial-mksports.com" class="highlight-link">MK体育</a> 即可浏览近期内容，页面结构清晰，分类直观。
+    </div>
+
+    <!-- 页尾访问提示 (圆角按钮感，但文本自然) -->
+    <div class="footer-visit">
+      <p>如果你也对运动的文化层面抱有好奇，可以随时浏览 <a href="https://mainofficial-mksports.com" class="rounded-link">MK体育</a>，那里有更多专题与笔记。</p>
+    </div>
+
+  </div>
+</body>
+</html>
